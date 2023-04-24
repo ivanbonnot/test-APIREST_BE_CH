@@ -9,9 +9,9 @@ homeWebRouter.get('/', (req, res) => {
     console.log("9", email)
 
     if (email) {
-        res.render(path.join(process.cwd(), 'public/views/home.ejs'), { email })
+        res.render(path.join(process.cwd(), '../FrontEnd/views/home.ejs'), { email })
     } else {
-        res.sendFile(path.join(process.cwd(), 'public/views/login.ejs'))
+        res.sendFile(path.join(process.cwd(), '../FrontEnd/views/login.ejs'))
         res.redirect('/login')
     }
 })

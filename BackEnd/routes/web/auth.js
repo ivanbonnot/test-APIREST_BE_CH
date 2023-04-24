@@ -17,7 +17,7 @@ authWebRouter.get('/login', (req, res) => {
     if (nombre) {
         res.redirect('/')
     } else {
-        res.render(path.join(process.cwd(), 'public/views/login.ejs'), { message: req.flash('error') })
+        res.render(path.join(process.cwd(), '../FrontEnd/views/login.ejs'), { message: req.flash('error') })
     }
 })
 
@@ -35,7 +35,7 @@ authWebRouter.get('/register', (req, res) => {
     if (nombre) {
         res.redirect('/')
     } else {
-        res.render(path.join(process.cwd(), 'public/views/register.ejs'), { message: req.flash('error') })
+        res.render(path.join(process.cwd(), '../FrontEnd/views/register.ejs'), { message: req.flash('error') })
     }
 })
 
@@ -76,7 +76,7 @@ authWebRouter.get('/logout', (req, res) => {
     if (nombre) {
         req.session.destroy(err => {
             if (!err) {
-                res.render(path.join(process.cwd(), 'public/views/logout.ejs'), { nombre })
+                res.render(path.join(process.cwd(), '../FrontEnd/views/logout.ejs'), { nombre })
             } else {
                 res.redirect('/')
             }

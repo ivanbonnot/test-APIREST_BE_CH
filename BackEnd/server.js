@@ -1,11 +1,11 @@
 const morgan = require('morgan');
 const express = require('express');
 const compression = require('compression')
-const logger = require('../src/log/log4js')
+const logger = require('./log/log4js')
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
-const { config } = require('../src/config/enviroment')
+const { config } = require('./config/enviroment')
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
 
@@ -25,8 +25,8 @@ const baseProcces = () => {
     const infoRouter = require('./routes/api/info')
     const productsRouter = require("./routes/api/product");
     const productsRouterTest = require("./routes/api/products-test");
-    const authWebRouter = require('../src/routes/web/auth')
-    const homeWebRouter = require('../src/routes/web/home')
+    const authWebRouter = require('./routes/web/auth')
+    const homeWebRouter = require('./routes/web/home')
 
     const connectToDb = require("./config/connectToDB");
 
@@ -35,8 +35,8 @@ const baseProcces = () => {
     const httpServer = new HTTPServer(app);
     const io = new IOServer(httpServer);
 
-    const {  getAllProductsController, newProductController } = require('../src/controllers/productsController')
-    const { addChatController, getAllChatsController} = require('../src/controllers/chatsController')
+    const {  getAllProductsController, newProductController } = require('./controllers/productsController')
+    const { addChatController, getAllChatsController} = require('./controllers/chatsController')
 
     //Settings
     app.set('port', process.env.PORT || 8080)

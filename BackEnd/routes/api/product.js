@@ -1,5 +1,5 @@
 const { Router } = require("express")
-const { newProductController, getAllProductsController, getProductByIdController, delProductByIdController } = require('../../controllers/productsController')
+const { newProductController, getAllProductsController, getProductByIdController, delProductByIdController, updateProductController } = require('../../controllers/productsController')
 
 const productsRouter = Router();
 
@@ -63,7 +63,7 @@ productsRouter.put('/:id', async (req, res) => {
         const productById = await getProductByIdController(id)
 
         if (productById) {
-            await dbController.updateProduct(id, productUpdate)
+            await updateProductController(id, productUpdate)
             res.send(productUpdate)
         } else {
             res.status(404).send({ error: 'id invalid / missing fields' })
@@ -77,7 +77,7 @@ productsRouter.put('/:id', async (req, res) => {
 productsRouter.delete('/:id', async (req, res) => {
     if (adm) {
         const { id } = req.params
-        const deleteProdById = await dbController.deleteProduct(id)
+        const deleteProdById = await delProductByIdController(id)
 
         if (deleteProdById) {
             res.send({ deleted: deleteProdById })
