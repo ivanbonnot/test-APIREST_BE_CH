@@ -2,6 +2,7 @@
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
     "autocannon": "^7.10.0",
+    "axios": "^1.3.6",
     "bcrypt": "^5.1.0",
     "compression": "^1.7.4",
     "connect-flash": "^0.1.1",
@@ -34,8 +35,8 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "dev": "nodemon src/server.js", 
-    "start": "0x src/server.js"
+    "dev": "nodemon server.js",
+    "start": "server.js"
   },
   "name": "apirestful",
   "version": "1.0.0",
