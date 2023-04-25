@@ -38,7 +38,7 @@ productsRouter.post('/', async (req, res) => {
         };
 
         await newProductController(product)
-        res.json('Guardado')
+        res.json(product)
 
     } else {
         res.send('Error: 403 Ruta: "api/productos" Método: "POST" No Autorizada')

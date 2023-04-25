@@ -32,11 +32,15 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
   },
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "server.js"
+    "start": "server.js",
+    "test": "mocha --timeout 10000"
   },
   "name": "apirestful",
   "version": "1.0.0",
