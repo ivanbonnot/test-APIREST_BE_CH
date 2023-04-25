@@ -2,7 +2,7 @@ const axios = require('axios')
 
 
 const url = "http://localhost:8080/api/productos";
-const id = "6446c74f7e06ae4da0109bbe"
+const id = "643ef72cff6e78b2c1631de6"
 
 const getProducts = async () => {
     const res = await axios.get(`${url}`);
@@ -29,29 +29,24 @@ const deleteProduct = async (id) => {
 getProducts();
 
 saveProduct({
-    timestamp: "testTimestamp",
     title: "testTitle",
     thumbnail: "testThumbnail",
     description: "testDescription",
     stock: 10,
     code: "testCode",
-    price: 100,
+    price: 100
 });
 
 getProductById(id);
 
 updateProduct(id, {
-    timestamp: "updateTimestamp",
     title: "updateTitle",
     thumbnail: "updateThumbnail",
     description: "updateDescription",
     stock: 100,
     code: "updateCode",
-    price: 1000,
+    price: 1000
 });
-
-getProducts();
 
 deleteProduct(id);
 
-getProducts();

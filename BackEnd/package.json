@@ -40,7 +40,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "server.js",
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 5000"
   },
   "name": "apirestful",
   "version": "1.0.0",

@@ -1,0 +1,6 @@
+{"_id":{"$oid":"642cc39e6018ebc4e22141b2"},"timestamp":{"$numberDouble":"1680655262104.0"},"title":"Impresora 3D Trimaker Nébula Cloud","thumbnail":"https://www.trimaker.com/img/N_Cloud_Panel.webp","description":"Impresora 3D","price":{"$numberInt":"170"},"__v":{"$numberInt":"0"}}
+
+{"_id":{"$oid":"642cc6bb0214116cbf7ca8f0"},"timestamp":{"$numberDouble":"1680656059048.0"},"title":"Impresora 3D Trimaker Cosmos II","thumbnail":"https://www.trimaker.com/img/Cosmos_Panel.webp","description":"Impresora 3D","price":{"$numberInt":"300"},"__v":{"$numberInt":"0"}}
+
+{"_id":{"$oid":"643ef72cff6e78b2c1631de6"},"title":"Impresora 3D Trimaker Nébula","thumbnail":"https://www.trimaker.com/img/Nebula_Panel.webp","description":"","price":{"$numberInt":"150"},"__v":{"$numberInt":"0"}}
+

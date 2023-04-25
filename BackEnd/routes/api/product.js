@@ -77,12 +77,13 @@ productsRouter.put('/:id', async (req, res) => {
 productsRouter.delete('/:id', async (req, res) => {
     if (adm) {
         const { id } = req.params
-        const deleteProdById = await delProductByIdController(id)
-
-        if (deleteProdById) {
-            res.send({ deleted: deleteProdById })
+        const productById = await getProductByIdController(id)
+    
+        if (productById) {
+            const deleteProdById = await delProductByIdController(id)
+            res.status(200).json({ deleted: deleteProdById })
         } else {
-            res.status(404).send({ error: 'Product not found' })
+            res.status(404).json({ error: 'Product not found' })
         }
 
     } else {
